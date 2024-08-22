@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Smart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class ="container">
+         <div class="row justify-content-between align-items-center">
+        <div class="logo">
+          <p>Bee smart</p>
+          </div>
+          <button type="button" class ="nav-toggler">
+          <span></span>
+          </button>	
+          <n class="nav">
+          <ul> 	  
+           <li class="nav-item"><a href="#home">HOME</a></li>
+           <li class="nav-item"><a href="#dashboard">DASHBOARD</a></li>
+             <li class="nav-item"><a href="#hive details">HIVE DETAILS</a></li>
+             <li class="nav-item"><a href="#about">ABOUT</a></li>
+             <li class="nav-item"><a href="#contact">CONTACT </a></li>
+            </ul>
+            </nav>
+         </div>
+        </div>
+       </header>
+
+       <section class="home-section"  id="home">
+        <div class="content-box">
+            <h1>Welcome to Bee Smart</h1>
+            <p>Bee Smart makes beekeeping easier and smarter. Our technology helps monitor and manage hives with ease. Join us in bringing modern solutions to beekeeping.</p>
+        </div>
+    </section>
+    
+
+    
+    <section class="dashboard-section" id="dashboard">
+        <h1>Bee Box Dashboard</h1>
+        <div class="cards-container">
+    
+            <div class="card">
+                <h2>Bee Traffic</h2>
+                <div id="bee-traffic" class="data-value">Loading...</div>
+            </div>
+            <div class="card">
+                <h2>Honey Level</h2>
+                <div id="honey-level" class="data-value">Loading...</div>
+            </div>
+        </div>
+        <canvas id="beeTrafficChart" width="400" height="200"></canvas>
+    </section>
+    
+   
+
+    
+        <section class ="hive-selection" id="hive details">
+            <h1>Select a Hive</h1>
+            <div class="hive-buttons">
+                <!-- Create buttons for each hive -->
+                <button onclick="selectHive('Hive-001')">Hive 1</button>
+                <button onclick="selectHive('Hive-002')">Hive 2</button>
+                <button onclick="selectHive('Hive-003')">Hive 3</button>
+                <button onclick="selectHive('Hive-004')">Hive 4</button>
+                <button onclick="selectHive('Hive-005')">Hive 5</button>
+                <button onclick="selectHive('Hive-006')">Hive 6</button>
+                <button onclick="selectHive('Hive-007')">Hive 7</button>
+                <button onclick="selectHive('Hive-008')">Hive 8</button>
+                <button onclick="selectHive('Hive-009')">Hive 9</button>
+                <button onclick="selectHive('Hive-010')">Hive 10</button>
+            </div>
+        
+        <div class="hive-details-section">
+            <h1>Hive Details</h1>
+            <div class="hive-info">
+                <h2>Hive ID: <span id="hive-id">Select a hive</span></h2>
+                <p>Location: <span id="hive-location">N/A</span></p>
+            </div>
+            <div class="sensor-readings">
+                <div class="sensor-card">
+                    <h2>Temperature</h2>
+                    <div id="temperature" class="data-value">N/A</div>
+                </div>
+                <div class="sensor-card">
+                    <h2>Humidity</h2>
+                    <div id="humidity" class="data-value">N/A</div>
+                </div>
+            </div>
+            <canvas id="temperatureChart" width="400" height="200"></canvas>
+            <canvas id="humidityChart" width="400" height="200"></canvas>
+        </div>
+        
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="left">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="img (2).jpg" alt="Image 1">
+                    <img src="img (3).jpg" alt="Image 2">
+                    <img src="img (4).jpg" alt="Image 3">
+                    <img src="img (6).jpg" alt="Image 4">
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="text-box">
+                <h1>About Bee Smart</h1>
+                <p>Welcome to Bee Smart, Our aimed at enhancing the management and monitoring of bee hives using advanced IoT technology. Our system provides real-time data on hive conditions, including temperature, humidity, and bee traffic, helping beekeepers ensure the health and productivity of their hives.</p>
+                <p>Our mission is to support sustainable beekeeping practices by offering innovative solutions that make hive management easier and more efficient. By leveraging the power of IoT, Beesmart allows beekeepers to monitor their hives remotely and make data-driven decisions to optimize honey production and hive health.</p>
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Real-time monitoring of hive conditions</li>
+                    <li>Detailed historical data and trend analysis</li>
+                    <li>Automated alerts for critical conditions</li>
+                    <li>Remote control of hive environment</li>
+                    <li>Easy integration with existing beekeeping operations</li>
+                </ul>
+            </div>
+        </div>
+    
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-details">
+            <div class="contact-item">
+                <h3>Opening Hours</h3>
+                <p>Monday to Sunday<br>10:00AM - 10:00PM</p>
+            </div>
+            <div class="contact-item">
+                <h3>Address</h3>
+                <p>175, New Kalmunai Road,<br>Kallady,<br>Batticaloa</p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>067-2228692</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>info@beesmart.lk</p>
+            </div>
+        </div>	
+    </section>
+    <script src="java.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
